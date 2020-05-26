@@ -1,0 +1,78 @@
+header {
+  height: 81px;
+
+  position: relative;
+  text-align: center;
+}
+
+header h1 {
+  padding: 14px 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
+
+header h1 a {
+  display: block;
+  width: 110px;
+  height: 48px;
+  color: transparent; /* 로고설명 투명 */
+  background: url(images/sp_com.png) no-repeat -300px 0;
+}
+
+header .lnb {
+  position: relative;
+}
+header .lnb ul {
+}
+
+header .lnb ul li {
+  display: inline-block;
+}
+
+header .lnb ul li a {
+  display: block;
+  padding: 0 35px;
+  font-size: 17px;
+  color: #333;
+  line-height: 81px;
+}
+
+header .spot {
+  position: absolute;
+  top: 0;
+  right: 50px;
+}
+header .spot ul {
+}
+header .spot li {
+  float: left;
+  position: relative; /* 구분선 때문에 */
+}
+
+header .spot li:after {
+  /* 구분선 */
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  width: 1px;
+  height: 7px;
+  background: #ccc;
+  transform: translateY(-50%);
+}
+
+header .spot li:first-child:after {
+  display: none;
+}
+header .spot ul li a {
+  display: block;
+  padding: 0 13px;
+  height: 81px; /* 넓게 클릭해주기 위해 */
+  line-height: 81px;
+}
+
+header .spot ul li a:last-child {
+  padding-right: 0;
+  /* padding으로주면 위의 padding값이 사라짐 */
+}
