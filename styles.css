@@ -95,18 +95,12 @@ header .spot ul li a:last-child {
   /* padding으로주면 위의 padding값이 사라짐 */
 }
 
+/* 배너영역 */
+
 .visual {
   /* 전체영역 */
   padding: 0 50px;
   position: relative;
-}
-.visual .con > div {
-  height: 640px;
-}
-
-.visual .con .slide {
-  width: 100%;
-  background: url(images/bg_main02.jpg) no-repeat center;
 }
 
 .visual .prev,
@@ -187,4 +181,42 @@ header .spot ul li a:last-child {
 
 .visual .control > div > div a.pause {
   background-position: -106px -60px;
+}
+
+.visual .con > div {
+  height: 640px;
+}
+
+.visual .con .slide {
+  width: 100%;
+  background: url(images/bg_main02.jpg) no-repeat center;
+  color: #fff;
+  
+}
+
+
+.visual .con .slide .icon,
+.visual .con .slide .txt {
+  position: absolute;
+  left: 
+  top: 
+}
+
+.visual .con .slide .icon {
+  background: url(images/sp_com.png);
+  background-position: 0 -261px;
+  top:304px;
+  left:804px;
+  width:124px;
+  height:96px;
+  color:transparent;
+
+.visual .con .slide p {
+  display: inline-block;
+  font-size: 26px;
+}
+
+.visual .con .slide span {
+  font-size: 30px;
+  font-weight: 600;
 }
