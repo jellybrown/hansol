@@ -1,3 +1,7 @@
+body {
+  min-width: 1180px;
+}
+
 header {
   height: 81px;
 
@@ -184,39 +188,121 @@ header .spot ul li a:last-child {
 }
 
 .visual .con > div {
-  height: 640px;
+  height: 690px;
 }
 
 .visual .con .slide {
   width: 100%;
   background: url(images/bg_main02.jpg) no-repeat center;
   color: #fff;
-  
 }
-
 
 .visual .con .slide .icon,
 .visual .con .slide .txt {
   position: absolute;
-  left: 
-  top: 
 }
 
 .visual .con .slide .icon {
   background: url(images/sp_com.png);
   background-position: 0 -261px;
-  top:304px;
-  left:804px;
-  width:124px;
-  height:96px;
-  color:transparent;
-
-.visual .con .slide p {
-  display: inline-block;
-  font-size: 26px;
+  top: 261px;
+  left: 695px;
+  width: 124px;
+  height: 96px;
+  color: transparent;
 }
 
-.visual .con .slide span {
+.visual .con .slide .txt {
+  top: 358px;
+  left: 576px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 357px;
+  margin: 24px 0 0 0;
+  line-height: 100%;
+}
+
+.visual .con .slide .txt > p {
+  display: inline-block;
+  font-size: 27px;
+  font-weight: 300;
+  color: #fff;
+}
+.visual .con .slide .txt > span {
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 0 0 8px;
+}
+
+/* 중간 제품정보 아이콘 영역 */
+
+.product a {
+  display: block;
+  font-size: 16px;
+}
+
+.product a:hover {
+  font-size: 16px;
+  color: #2d5b79;
+  font-weight: bold;
+}
+.product a:before {
+  content: ""; /* 아이콘 넣으려면 */
+  display: block; /* 아이콘 넣으려면 */
+  width: 65px; /* 아이콘 넣으려면 */
+  height: 51px; /* 아이콘 넣으려면 */
+  background: url(images/sp_com.png) no-repeat;
+  margin: 0 0 30px 0;
+}
+
+/* 제품정보 아이콘 */
+.product ul {
+  text-align: center; /* 전체 가운데정렬 */
+  font-size: 0;
+}
+
+.product li {
+  text-align: center;
+  padding: 57px 55px 52px 55px;
+  display: inline-block;
+}
+.product li:nth-child(1) a:before {
+  background-position: -3px -118px;
+}
+.product li:nth-child(2) a:before {
+  background-position: -72px -118px;
+}
+.product li:nth-child(3) a:before {
+  background-position: -145px -118px;
+}
+.product li:nth-child(4) a:before {
+  background-position: -221px -118px;
+}
+.product li:nth-child(5) a:before {
+  background-position: -290px -118px;
+}
+.product li:nth-child(6) a:before {
+  background-position: -360px -118px;
+}
+
+/* 아이콘 hover시 */
+.product li:nth-child(1) a:hover:before {
+  background-position: -3px -184px;
+}
+.product li:nth-child(2) a:hover:before {
+  background-position: -72px -184px;
+}
+.product li:nth-child(3) a:hover:before {
+  background-position: -145px -184px;
+}
+.product li:nth-child(4) a:hover:before {
+  background-position: -221px -184px;
+}
+.product li:nth-child(5) a:hover:before {
+  background-position: -290px -184px;
+}
+.product li:nth-child(6) a:hover:before {
+  background-position: -360px -184px;
 }
