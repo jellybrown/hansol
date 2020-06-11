@@ -107,86 +107,6 @@ header .spot ul li a:last-child {
   position: relative;
 }
 
-.visual .prev,
-.visual .next {
-  display: block;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%); /* 밑으로 내림 */
-  background: url(images/sp_com.png) no-repeat;
-  width: 28px;
-  height: 47px;
-  color: transparent;
-}
-.visual .prev {
-  left: 82px;
-  background-position: -128px -60px;
-}
-
-.visual .next {
-  right: 82px;
-  background-position: -158px -60px;
-}
-.visual .control {
-  position: absolute;
-  bottom: 50px;
-  text-align: center;
-  width: 100%;
-}
-.visual .control ul {
-  font-size: 0; /* 의문의 여백 사라지게 */
-  display: inline-block; /* 인라인블럭해줘야 일자로 됨 */
-  position: relative; /* 위로 이동시키기위해 relative를 줬다. */
-  top: -7px;
-}
-
-.visual .control li {
-  padding: 0 3px;
-  display: inline-block; /* 인라인블럭해줘야 일자로 됨 */
-}
-
-.visual .control ul li a {
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.5);
-  font-size: 0;
-}
-.visual .control li.on a {
-  background: #fff;
-}
-
-.visual .control > div {
-  display: inline-block;
-  position: relative;
-  padding: 0 56px 0 0;
-}
-
-.visual .control > div > div {
-  position: absolute;
-  right: 0; /* 오른쪽 여백 0 */
-}
-.visual .control > div > div a {
-  display: inline-block;
-  background: url(images/sp_com.png) no-repeat;
-  width: 10px;
-  height: 10px;
-  overflow: hidden; /* 가로세로 뚫고나가지 못하게 */
-  color: transparent;
-  margin: 0 0 0 7px;
-  opacity: 0.5;
-}
-.visual .control > div > div a.on {
-  opacity: 1;
-}
-.visual .control > div > div a.play {
-  background-position: -106px -72px;
-}
-
-.visual .control > div > div a.pause {
-  background-position: -106px -60px;
-}
-
 .visual .con > div {
   height: 690px;
 }
@@ -305,4 +225,204 @@ header .spot ul li a:last-child {
 }
 .product li:nth-child(6) a:hover:before {
   background-position: -360px -184px;
+}
+
+.magazine {
+  position: relative; /* slide의 기준이 되게 */
+  background: #dfd9d1;
+  height: 670px;
+}
+.magazine h2 {
+  padding: 50px 0 16px;
+  font-size: 28px;
+  color: #000;
+  text-align: center;
+  line-height: 100%;
+}
+.magazine p {
+  text-align: center;
+  font-size: 14px;
+  color: #000000;
+}
+.magazine .slide_box > div {
+  width: 1180px;
+  height: 430px;
+}
+
+.magazine .slide_box .left {
+  overflow: hidden; /* 이미지 넘어가지 못하게 */
+  position: relative;
+  float: left;
+  width: 800px;
+  height: 430px;
+}
+
+.magazine .slide_box .left img {
+  width: 100%; /* 이미지 비율 약간 맞추기 */
+}
+.magazine .slide_box .left div {
+  /* 이미지위 글자영역 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 47px 20px 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.magazine .slide_box .left div h3 {
+  color: #fff;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 0 0 30px 0;
+}
+
+.magazine .slide_box .left div h4 {
+  display: block;
+  color: #fff;
+  font-size: 22px;
+
+  margin: 0 0 11px;
+  line-height: 30px;
+}
+
+.magazine .slide_box .left div h4 > span {
+  font-weight: normal;
+  display: block;
+  font-size: 20px;
+  line-height: 1;
+  margin: 0 0 5px 0;
+  color: #f1f1f0;
+}
+
+.magazine .slide_box .left div p {
+  color: #f1f1f0;
+  font-size: 17px;
+  text-align: left;
+  line-height: 24px;
+}
+
+.magazine .slide_box .left div a {
+  display: block; /* a요소라서 block해야 width,height */
+  width: 160px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  border: 1px solid #fff;
+  position: absolute;
+  right: 20px;
+  bottom: 40px;
+}
+
+.magazine .slide_box .right {
+  float: right;
+  width: 380px;
+  height: 430px;
+  background: #fff;
+  padding: 20px 20px 0; /* 정렬이 돼있는걸 방지?? */
+  box-sizing: border-box;
+}
+
+.magazine .slide_box .right li {
+  padding: 0 0 20px;
+}
+
+.magazine .slide_box .right li a {
+  display: block;
+  position: relative;
+  padding: 0 0 0 100px; /* img를 위한 */
+}
+
+.magazine .slide_box .right li a img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 80px;
+}
+
+/* slide */
+
+.slide .prev,
+.slide .next {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* 밑으로 내림 */
+  background: url(images/sp_com.png) no-repeat;
+  width: 28px;
+  height: 47px;
+  color: transparent;
+}
+.slide .prev {
+  left: 82px;
+  background-position: -128px -60px;
+}
+
+.slide .next {
+  right: 82px;
+  background-position: -158px -60px;
+}
+.slide .control {
+  position: absolute;
+  bottom: 50px;
+  text-align: center;
+  width: 100%;
+}
+.slide .control ul {
+  font-size: 0; /* 의문의 여백 사라지게 */
+  display: inline-block; /* 인라인블럭해줘야 일자로 됨 */
+  position: relative; /* 위로 이동시키기위해 relative를 줬다. */
+  top: -7px;
+}
+
+.slide .control li {
+  padding: 0 3px;
+  display: inline-block; /* 인라인블럭해줘야 일자로 됨 */
+}
+
+.slide .control ul li a {
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.5);
+  font-size: 0;
+}
+.slide .control li.on a {
+  background: #fff;
+}
+
+.slide .control > div {
+  display: inline-block;
+  position: relative;
+  padding: 0 56px 0 0;
+}
+
+.slide .control > div > div {
+  position: absolute;
+  right: 0; /* 오른쪽 여백 0 */
+}
+.slide .control > div > div a {
+  display: inline-block;
+  background: url(images/sp_com.png) no-repeat;
+  width: 10px;
+  height: 10px;
+  overflow: hidden; /* 가로세로 뚫고나가지 못하게 */
+  color: transparent;
+  margin: 0 0 0 7px;
+  opacity: 0.5;
+}
+.slide .control > div > div a.on {
+  opacity: 1;
+}
+.slide .control > div > div a.play {
+  background-position: -106px -72px;
+}
+
+.slide .control > div > div a.pause {
+  background-position: -106px -60px;
 }
