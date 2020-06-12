@@ -231,6 +231,7 @@ header .spot ul li a:last-child {
   position: relative; /* slide의 기준이 되게 */
   background: #dfd9d1;
   height: 670px;
+  overflow: hidden;
 }
 .magazine h2 {
   padding: 50px 0 16px;
@@ -245,10 +246,20 @@ header .spot ul li a:last-child {
   color: #000000;
 }
 .magazine .slide_box > div {
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  transform: translateX(-50%);
   width: 1180px;
   height: 430px;
 }
 
+.magazine .slide_box > div:nth-child(1) {
+  margin-left: -1280px;
+}
+.magazine .slide_box > div:nth-child(3) {
+  margin-left: 1280px;
+}
 .magazine .slide_box .left {
   overflow: hidden; /* 이미지 넘어가지 못하게 */
   position: relative;
@@ -332,9 +343,18 @@ header .spot ul li a:last-child {
 }
 
 .magazine .slide_box .right li a {
-  display: block;
+  display: table;
+  width: 100%;
+}
+
+.magazine .slide_box .right li a div {
+  display: table-cell;
   position: relative;
   padding: 0 0 0 100px; /* img를 위한 */
+  font-size: 16px;
+  color: #333;
+  height: 82px;
+  vertical-align: middle;
 }
 
 .magazine .slide_box .right li a img {
@@ -345,10 +365,34 @@ header .spot ul li a:last-child {
   height: 80px;
 }
 
+.magazine .slide_box .right li a strong {
+  font-size: 13px;
+  color: #000;
+  display: block;
+}
+
+.magazine .slide .control {
+  bottom: 48px;
+}
+
+.magazine.slide .prev {
+  /* 화살표 위치 가운데로부터 조정 */
+  left: 50%;
+  margin: 26px 0 0 -640px;
+  background-position: -320px -543px;
+}
+.magazine.slide .next {
+  /* 창크기 조절해도 이상한데 가지않도록 */
+  right: 50%;
+  margin: 26px -640px 0 0;
+  background-position: -348px -543px;
+}
+
 /* slide */
 
 .slide .prev,
 .slide .next {
+  z-index: 10;
   display: block;
   position: absolute;
   top: 50%;
