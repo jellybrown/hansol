@@ -1,5 +1,6 @@
 body {
   min-width: 1180px;
+  font-family: Nanum Gothic;
 }
 
 header {
@@ -399,22 +400,123 @@ header .spot ul li a:last-child {
   padding: 55px 0;
 }
 
-.notice > div .find {
-  float: left;
+/* 대리점 찾기 */
+.notice > .clear > .find a {
   display: block;
-  width: 280px;
-  height: 280px;
+  width: 100%;
+  height: 100%;
   padding: 155px 0 0 0;
-  margin: 0 20px 0 0;
-
   box-sizing: border-box;
   color: #fff;
   font-weight: bold;
   font-size: 17px;
   text-align: center;
-  background: url(images/bg_key_link03.jpg);
+  transition: all 0.5s;
+  line-height: 22px;
+}
+.notice > .clear > .find a:hover {
+  background: rgba(45, 91, 121, 0.5);
 }
 
+.notice > .clear > .find {
+  float: left;
+  display: block;
+  width: 280px;
+  height: 280px;
+  margin: 0 20px 0 0;
+  background: url(images/bg_key_link03.jpg) no-repeat;
+}
+
+.notice > .clear > .find a span {
+  /* hover 전 */
+  display: none;
+  padding: 20px 0 0;
+  font-weight: normal;
+  font-size: 14px;
+}
+.notice > .clear > .find a:hover span {
+  display: block;
+  opacity: 1;
+}
+/*공지사항, 뉴스 */
+.notice .board {
+  float: left;
+  width: 580px;
+  height: 280px;
+  margin: 0 20px 0 0;
+}
+
+.notice .board > div h2 {
+  height: 67px;
+  font-size: 24px;
+  color: #2d5b79;
+  text-align: center;
+  line-height: 67px;
+  border-bottom: 1px solid #fff;
+}
+
+.notice .board > div {
+  position: relative;
+}
+
+.notice .board > div > a {
+  position: absolute;
+  top: 24px;
+  right: 23px;
+  width: 30px;
+  height: 30px;
+  background: url(images/sp_com.png) no-repeat -195px -61px #fff;
+  border-radius: 30px;
+  color: transparent;
+}
+
+.notice .board > .notices,
+.notice .board > .news {
+  width: 280px;
+  height: 280px;
+  background-color: #f2f0ed;
+}
+
+.notice .board > div > ul > li {
+  height: 105px;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  display: block;
+  border-bottom: 1px solid #fff;
+}
+.notice .board > div > ul > li:nth-child(2) {
+  border: none;
+}
+
+.notice .board > div > ul > li > a {
+  display: block;
+  height: 100%;
+  position: relative;
+}
+
+.notice .board > div > ul > li > a > p:first-child {
+  display: block;
+  color: #000;
+  font-size: 14px;
+}
+
+.notice .board > div > ul > li > a > p:last-child {
+  font-size: 13px;
+  color: #979797;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.notice .board > .notices {
+  float: left;
+}
+
+.notice .board > .news {
+  float: right;
+}
+
+/* 검색창 */
 .notice .search {
   float: left;
   width: 280px;
@@ -438,9 +540,8 @@ header .spot ul li a:last-child {
   height: 42px;
   border: none;
   background-color: #f2f0ed;
-  margin: 6px 0;
   font-size: 14px;
-  text-indent: 20px;
+  text-indent: 17px;
 }
 
 .notice .search > div input::-webkit-input-placeholder {
@@ -456,6 +557,10 @@ header .spot ul li a:last-child {
   background-color: #2d5b79;
   color: #fff;
   font-size: 14px;
+  margin: 20px 0 0 0;
+}
+.notice .search > div div {
+  padding: 0 0 10px 0;
 }
 
 /* slide */
@@ -539,4 +644,47 @@ header .spot ul li a:last-child {
 
 .slide .control > div > div a.pause {
   background-position: -106px -60px;
+}
+
+/* footer */
+footer .top {
+  background: #383f43;
+}
+footer .top > div {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 13px 0;
+}
+footer .top > div ul {
+  float: left;
+}
+footer .top > div ul li {
+  float: left;
+  padding: 0 19px 0 0;
+  position: relative;
+}
+
+footer .top > div ul li:after {
+  content: "";
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  margin-top: -4px;
+  width: 1px;
+  height: 8px;
+  background: #70767a;
+}
+
+footer .top > div ul li a {
+  color: #fff;
+  font-size: 13px;
+  line-height: 45px;
+}
+
+footer .top > div ul li:last-child:after {
+  display: none;
+}
+
+footer .top > div div {
+  float: right;
 }
