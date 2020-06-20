@@ -688,3 +688,9 @@ footer .top > div ul li:last-child:after {
 footer .top > div div {
   float: right;
 }
+
+footer .top > div div p {
+  display: inline-block;
+  color: #fff;
+  background-color: #2a3033;
+}
