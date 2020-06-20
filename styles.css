@@ -646,7 +646,7 @@ header .spot ul li a:last-child {
   background-position: -106px -60px;
 }
 
-/* footer */
+/* footer(top) */
 footer .top {
   background: #383f43;
 }
@@ -693,4 +693,37 @@ footer .top > div div p {
   display: inline-block;
   color: #fff;
   background-color: #2a3033;
+  width: 300px;
+  height: 47px;
+  padding: 10px 0 5px 0;
+  font-size: 13px;
+  font-weight: bold;
+  box-sizing: border-box;
+  position: relative;
+  vertical-align: top;
+}
+
+footer .top > div div p:after {
+  display: block;
+  font-size: 11px;
+  font-weight: normal;
+  content: "※제품구매문의는 대리점찾기에서 가까운 매장을 검색해 주세요";
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+footer .top > div div select {
+  width: 200px;
+  height: 47px;
+  padding: 0 0 0 21px;
+  font-size: 12px;
+}
+
+/* footer(btm) */
+footer .btm {
+  height: 210px;
+  background-color: #4c5459;
 }
