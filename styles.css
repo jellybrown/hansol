@@ -695,7 +695,8 @@ footer .top > div div p {
   background-color: #2a3033;
   width: 300px;
   height: 47px;
-  padding: 10px 0 5px 0;
+  padding: 8px 0 5px 0;
+  margin-right: 10px;
   font-size: 13px;
   font-weight: bold;
   box-sizing: border-box;
@@ -726,4 +727,73 @@ footer .top > div div select {
 footer .btm {
   height: 210px;
   background-color: #4c5459;
+  position: relative;
+}
+
+footer .btm p:first-child {
+  display: inline-block;
+  background: url(images/sp_com.png) no-repeat -150px 0;
+  width: 130px;
+  height: 50px;
+  color: transparent;
+  position: absolute;
+  top: 40px;
+  left: 168px;
+}
+
+footer .btm p:not(.logo) {
+  color: white;
+  position: absolute;
+  font-size: 13px;
+}
+footer .btm p:nth-child(2) {
+  bottom: 73px;
+  left: 168px;
+}
+
+footer .btm p:nth-child(3) {
+  bottom: 45px;
+  left: 168px;
+}
+
+footer .btm p > span:after {
+  content: "";
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  margin-top: -4px;
+  width: 1px;
+  height: 8px;
+  background: #70767a;
+}
+
+footer .btm .sns {
+  position: absolute;
+  top: 90px;
+  right: 160px;
+  height: 45px;
+}
+
+footer .btm .sns a {
+  display: inline-block;
+  background: url(images/sp_com.png) no-repeat;
+  width: 45px;
+  height: 45px;
+  font-size: 6px;
+  color: transparent;
+  background-color: #383f43;
+  margin: 0 13px 0 0;
+  box-sizing: border-box;
+}
+
+footer .btm .sns .blog {
+  background-position: -319px -605px;
+}
+
+footer .btm .sns .instagram {
+  background-position: -366px -605px;
+}
+
+footer .btm .sns .youtube {
+  background-position: -413px -605px;
 }
